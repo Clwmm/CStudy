@@ -1,0 +1,6 @@
+# ignore all .obj files
+*.obj
+# ignore all .exe files
+*.exe
+# ignore all .txt files
+*.txt
