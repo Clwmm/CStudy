@@ -1,44 +1,43 @@
 #include <stdio.h>
+#include <string.h>
 
 int main(int argc, char* argv[])
 {
-	if (argc != 2)
+	if (argc != 3)
 	{
-		printf("Nie podano pliku");
-		return 0;
+		printf("You must provide the file access path and password");
+		return 1;
 	}
+
+	int passwordL = strlen(argv[2]);
 
 	FILE* file1;
-	FILE* file2;
-	
-	char Tymczasowy[L_tmpnam + 1];
-	tmpnam(Tymczasowy);
-
 	if (NULL == (file1 = fopen(argv[1], "rb")))
-		return 1;
-	if (NULL == (file2 = fopen(Tymczasowy, "wb")))
-		return 1;
+		return -1;
 
-	double x;
-	while (EOF != scanf("%lf", &x))
+	char cwd[256];
+	getcwd(cwd, sizeof(cwd));
+	char* temp = tmpnam(cwd);
+
+	FILE* file2;
+	if (NULL == (file2 = fopen(temp, "wb")))
+		return -1;
+
+	char cha;
+	int i = 0;
+	while ((cha = getc(file1)) != EOF)
 	{
-		printf("%lf\n", x);
+		cha ^= argv[2][i % (passwordL)];
+		i++;
+		putc(cha, file2);
+		putc(cha, stdout);
 	}
 
-	/*int znak;
-	while ((znak = getc(file1)) != EOF)
-	{
-		znak++;
-		putc(znak, stdout);
-	}*/
+	unlink(argv[1]);
+	rename(temp, argv[1]);
 
-	//unlink(argv[1]);
-	//rename(Tymczasowy, argv[1]);
+	fclose(file1);
+	fclose(file2);
 
-
-	printf("\nHello World!");
 	return 0;
 }
-
-/*
-*/
