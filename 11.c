@@ -1,40 +1,40 @@
 #include <stdio.h>
 
-double silnia(double liczba);
+double factorial(double number);
 
 int main()
 {
 	double n, k;
-	printf("\nPodaj n: ");
+	printf("\Specify n: ");
 	scanf("%lf", &n);
-	printf("Podaj k: ");
+	printf("Specify k: ");
 	scanf("%lf", &k);
 
 	if (k < 0 || n < 0 || n < k)
 	{
-		printf("Zla deklaracja zmiennych");
+		printf("Wrong declaration of variables");
 		return 0;
 	}
 
-	double dzielna = silnia(n);
-	double dzielnik = silnia(k) * silnia(n - k);
-	double wynik = dzielna / dzielnik;
+	double x = factorial(n);
+	double y = factorial(k) * factorial(n - k);
+	double result = x / y;
 
-	printf("Dwumian Newtwona wynosi: %lf\n\n", wynik);
+	printf("Newtwon's binomial is: %lf\n\n", result);
 
 	return 0;
 };
 
-double silnia(double liczba)
+double factorial(double number)
 {
-	if (liczba == 0 || liczba == 1)
+	if (number == 0 || number == 1)
 		return 1;
 	
-	double wynik = 1.000000;
+	double result = 1.000000;
 
-	for (double i = 2; i <= liczba; i++)
+	for (double i = 2; i <= number; i++)
 	{
-		wynik *= i;
+		result *= i;
 	}
-	return wynik;
+	return result;
 };

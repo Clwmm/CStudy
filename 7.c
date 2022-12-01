@@ -5,9 +5,9 @@ unsigned fibonacci(int n);
 int main()
 {
 	int n;
-	printf("Podaj liczbe ciagu Fibonacciego: ");
+	printf("Give the number of the Fibonacci sequence: ");
 	scanf("%d", &n);
-	printf("%d liczba ciagu Fibonacciego wynosi: %d", n, fibonacci(n));
+	printf("%d The number of the Fibonacci sequence is: %d", n, fibonacci(n));
 	return 0;
 }
 

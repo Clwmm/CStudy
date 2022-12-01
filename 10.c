@@ -1,18 +1,18 @@
 #include <stdio.h>
 
-double silnia(double i)
+double factorial(double i)
 {
 	if (i == 0 || i == 1)
 		return 1;
 
-	return i * (silnia(i - 1));
+	return i * (factorial(i - 1));
 }
 
 int main()
 {
 	double a;
-	printf("Podaj liczbe: ");
+	printf("Enter the number: ");
 	scanf("%lf", &a);
-	printf("Silnia z %.lf: %.lf", a, silnia(a));
+	printf("Factorial from %.lf: %.lf", a, factorial(a));
 	return 0;
 }

@@ -121,9 +121,9 @@ int main()
 {
 	int number, system;
 
-	printf("Podaj calkowita liczbe w systemie dziesietnym: ");
+	printf("Give the integer in decimal system: ");
 	scanf("%d", &number);
-	printf("Podaj na jaki system zamienic [od 2 do 20]: ");
+	printf("Specify which system to convert to [from 2 to 20]: ");
 	scanf("%d", &system);
 	
 	converter(number, system);

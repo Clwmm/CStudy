@@ -24,7 +24,7 @@ void ArToRz(int c)
 
 void RzToAr(char* c, int size)
 {
-    int wynik = 0;
+    int result = 0;
     for (int i = 0; i < size; i++)
     {
         switch (c[i])
@@ -32,7 +32,7 @@ void RzToAr(char* c, int size)
         case 'I':
             if (i == size - 1)
             {
-                wynik++;
+                result++;
                 break;
             }
             else
@@ -40,15 +40,15 @@ void RzToAr(char* c, int size)
                 switch (c[i + 1])
                 {
                 case 'V':
-                    wynik += 4;
+                    result += 4;
                     i++;
                     break;
                 case 'X':
-                    wynik += 9;
+                    result += 9;
                     i++;
                     break;
                 default:
-                    wynik++;
+                    result++;
                     break;
                 }
             }
@@ -56,13 +56,13 @@ void RzToAr(char* c, int size)
 
 
         case 'V':
-            wynik += 5;
+            result += 5;
             break;
 
         case 'X':
             if (i == size - 1)
             {
-                wynik += 10;
+                result += 10;
                 break;
             }
             else
@@ -70,15 +70,15 @@ void RzToAr(char* c, int size)
                 switch (c[i + 1])
                 {
                 case 'L':
-                    wynik += 40;
+                    result += 40;
                     i++;
                     break;
                 case 'C':
-                    wynik += 90;
+                    result += 90;
                     i++;
                     break;
                 default:
-                    wynik += 10;
+                    result += 10;
                     break;
                 }
             }
@@ -86,13 +86,13 @@ void RzToAr(char* c, int size)
 
 
         case 'L':
-            wynik += 50;
+            result += 50;
             break;
 
         case 'C':
             if (i == size - 1)
             {
-                wynik += 100;
+                result += 100;
                 break;
             }
             else
@@ -100,33 +100,33 @@ void RzToAr(char* c, int size)
                 switch (c[i + 1])
                 {
                 case 'D':
-                    wynik += 400;
+                    result += 400;
                     i++;
                     break;
                 case 'M':
-                    wynik += 900;
+                    result += 900;
                     i++;
                     break;
                 default:
-                    wynik += 100;
+                    result += 100;
                     break;
                 }
             }
             break;
 
         case 'D':
-            wynik += 500;
+            result += 500;
             break;
 
         case 'M':
-            wynik += 1000;
+            result += 1000;
             break;
 
         default:
             break;
         }
     }
-    printf("%d", wynik);
+    printf("%d", result);
     return;
 }
 
@@ -134,7 +134,7 @@ int main(int argc, char *argv[])
 {
     if (argc != 2)
     {
-        printf("Nie podano liczby");
+        printf("No number was given");
         return 0;
     }
 

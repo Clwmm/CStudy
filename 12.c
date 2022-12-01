@@ -7,7 +7,7 @@ int main(int argc, char* argv[])
 {
 	if (argc < 2)
 	{
-		printf("Nie podano tekstu");
+		printf("Text not provided");
 		return 0;
 	}
 
@@ -43,9 +43,9 @@ int main(int argc, char* argv[])
 	}
 
 	if (boolean)
-		printf("Nie jest");
+		printf("The text is not a palindrome");
 	else
-		printf("Jest");
+		printf("The text is a palindrome");
 
 	return 0;
 }

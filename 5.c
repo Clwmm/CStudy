@@ -2,28 +2,35 @@
 
 int main()
 {
-	char operator;
-	double pierwszy, drugi;
-	printf("Wypisz dzialanie [liczby i operator oddzelone spacja]: \n");
-	scanf("%lf %c %lf", &pierwszy, &operator, &drugi);
-	switch (operator)
+	while (1)
 	{
-	case '+':
-		printf("Wynik: %lf", pierwszy + drugi);
-		break;
-	case '-':
-		printf("Wynik: %.1lf", pierwszy - drugi);
-		break;
-	case '*':
-		printf("Wynik: %.1lf", pierwszy * drugi);
-		break;
-	case '/':
-		printf("Wynik: %.1lf", pierwszy / drugi);
-		break;
-	default:
-		printf(" Podany zly operator");
-		break;
+		char operator;
+		double x, y;
+		printf("[operator = q] End of program\n");
+		printf("Write out the calculations [numbers and operator separated by space]:\n");
+		scanf("%lf %c %lf", &x, &operator, &y);
+		switch (operator)
+		{
+		case '+':
+			printf("Result: %lf\n", x + y);
+			break;
+		case '-':
+			printf("Result: %.1lf\n", x - y);
+			break;
+		case '*':
+			printf("Result: %.1lf\n", x * y);
+			break;
+		case '/':
+			printf("Result: %.1lf\n", x / y);
+			break;
+		case 'q':
+			return 0;
+		default:
+			printf("Wrong operator specified\n");
+			break;
+		}
 	}
+	
 
 	return 0;
 }

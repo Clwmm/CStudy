@@ -3,13 +3,13 @@
 int main()
 {
 	double A, B, C, x;
-	printf("Podaj A: ");
+	printf("Specify A: ");
 	scanf("%lf", &A);
-	printf("Podaj B: ");
+	printf("Specify B: ");
 	scanf("%lf", &B);
-	printf("Podaj C: ");
+	printf("Specify C: ");
 	scanf("%lf", &C);
-	printf("Podaj x: ");
+	printf("Specify x: ");
 	scanf("%lf", &x);
 	printf("y = %.1lf*%.1lf*%.1lf + %.1lf*%.1lf + %.1lf", A, x, x, B, x, C);
 	printf("\ny = %.1lf", A*x*x + B*x + C);
