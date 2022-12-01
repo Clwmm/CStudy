@@ -57,6 +57,29 @@ int main()
             if (strncmp(argv, "log", 3) == 0)
                 push(log(pop()));
 
+            if (strncmp(argv, "**", 2) == 0)
+            {
+                double x = pop();
+                double y = pop();
+                double wynik = y;
+                if (x == 0)
+                {
+                    push(1);
+                    break;
+                }
+                for (int i = 1; i < x; i++)
+                {
+                    wynik *= y;
+                }
+                push(wynik);
+            }
+            else if (strncmp(argv, "*", 1) == 0)
+            {
+                double x = pop();
+                double y = pop();
+                push(x * y);
+            }
+
             // Calculations
             switch (*argv)
             {
@@ -77,13 +100,6 @@ int main()
                 push(y - x);
                 break;
             }
-            case '*':
-            {
-                double x = pop();
-                double y = pop();
-                push(x * y);
-                break;
-            }
             case '/':
             {
                 double x = pop();
@@ -91,24 +107,6 @@ int main()
                 push(y / x);
                 break;
             }
-            case '^':
-            {
-                double x = pop();
-                double y = pop();
-                double wynik = y;
-                if (x == 0)
-                {
-                    push(1);
-                    break;
-                }
-                for (int i = 1; i < x; i++)
-                {
-                    wynik *= y;
-                }
-                push(wynik);
-                break;
-            }
-
             case '=':
                 printf("= %.1lf\n", heap[heapi - 1]);
                 break;
