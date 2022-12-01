@@ -3,8 +3,8 @@
 #include <string.h>
 
 #define CHARSIZE 15
-#define MAXSIZE 3
-#define LIBMAXSIZE 2
+#define MAXSIZE 20
+#define LIBMAXSIZE 50
 
 struct libr 
 {
@@ -28,29 +28,12 @@ void printpeople();
 void printbooks(int a);
 
 // Menu functions
-
 void addbook();
 void addperson();
 
 int main() 
 {
-
-    /*struct libr in[2] = 
-    {
-        {1, "Mateusz", "Kalwa", 2, {"1984", "Folwark"}, {"01.11", "02.11"}, {"05.11", "09.11"}},
-        {2, "Ania", "Skamaj", 3, {"Kocham", "Cie", "CB"}, {"01.12", "02.12", "03.12"}, {"05.12", "09.12", "10.12"}}
-    };
-    for (int i = 0; i < 2; i++)
-    {
-        printf("%d. %s %s\n", in[i].id, in[i].name, in[i].surname);
-        for (int j = 0; j < in[i].numberofbooks; j++)
-        {
-            printf("\t%s\tFrom: %s\tTo: %s\n", in[i].book[j], in[i].datafrom[j], in[i].datato[j]);
-        }
-    }*/
-
     loadfromfile();
-
     while (1)
     {
         printf("LIBRARY DATABASE\n\t[1] Display database\n\t[2] Add book to person\n\t[3] Add person\n\t[4] Exit\n[] ");
@@ -68,13 +51,12 @@ int main()
             addperson();
             break;
         case 4:
-            //savetofile();
+            savetofile();
             return 0;
         default:
             break;
         }
     }
-
     return 0;
 }
 
@@ -209,16 +191,3 @@ void addperson()
     in[libit].id = libit + 1;
     libit++;
 }
-
-// https://www.geeksforgeeks.org/scanf-and-fscanf-in-c/
-
-/*
-    char a[] = "Lolz";
-    printf("%s\n", a);
-    char b[] = "jest";
-    strcpy(a, "jestds");
-    printf("%s\n", a);
-
-    char b[] = "Mateusz";
-    strcpy(in[0].name, b);
-*/
