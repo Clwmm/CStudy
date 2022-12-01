@@ -15,7 +15,7 @@ unsigned NWD(int a, int b)
 int main()
 {
 	int a, b;
-	printf("Podaj dwie liczby [oddzielone spacja]: ");
+	printf("Enter two numbers [separated by a space]: ");
 	scanf("%d %d", &a, &b);
 	printf("NWD: %d", NWD(a, b));
 	return 0;

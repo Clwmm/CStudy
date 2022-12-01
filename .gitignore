@@ -4,3 +4,5 @@
 *.exe
 # ignore all .txt files
 *.txt
+# ignore all .dat files
+*.dat

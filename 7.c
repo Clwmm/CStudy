@@ -20,15 +20,15 @@ unsigned fibonacci(int n)
 	else
 	{
 		unsigned l = 0, p = 1;
-		unsigned wynik;
+		unsigned result;
 
 		for (int i = 2; i <= n; i++)
 		{
-			wynik = l + p;
+			result = l + p;
 			l = p;
-			p = wynik;
+			p = result;
 		}
 
-		return wynik;
+		return result;
 	}
 }
