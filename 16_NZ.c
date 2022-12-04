@@ -15,9 +15,8 @@ int main(int argc, char* argv[])
 	if (NULL == (file1 = fopen(argv[1], "rb")))
 		return -1;
 
-	char cwd[256];
-	getcwd(cwd, sizeof(cwd));
-	char* temp = tmpnam(cwd);
+	char temp[256];
+	tmpnam(temp);
 
 	FILE* file2;
 	if (NULL == (file2 = fopen(temp, "wb")))
