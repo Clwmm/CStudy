@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <time.h>
 #include "18_calc.h"
 
 #define MAX_LINE 1000
@@ -37,24 +38,20 @@ int main(int argc, char* argv[])
 
 	n = (x_end - x_start) / delta_x;
 
+	clock_t t;
+	t = clock();
+
 	for (int i = 0; i < n; i++)
 	{
 		integral += calc(function, c_fun, x_start + (i * delta_x));
 	}
-
-	/*n = x_start + delta_x;
-	while (n < x_end)
-	{
-		integral += calc(function, c_fun, n);
-		n += delta_x;
-	}*/
-
 	integral += calc(function, c_fun, x_start) * 0.5;
 	integral += calc(function, c_fun, x_end) * 0.5;
-
 	integral *= delta_x;
 
-	printf("\nIntegral: %lf\n", integral);
+	t = clock() - t;
+	double time_t = ((double)t) / CLOCKS_PER_SEC;
+	printf("\nIntegral: %lf\nTime: %f s\n", integral, time_t);
 
 	for (int i = 0; i < c_fun; i++)
 		free(function[i]);
