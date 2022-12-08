@@ -43,9 +43,9 @@ int main(int argc, char* argv[])
 	}
 
 	if (boolean)
-		printf("The text is not a palindrome");
+		printf("The text is not a palindrome\n");
 	else
-		printf("The text is a palindrome");
+		printf("The text is a palindrome\n");
 
 	return 0;
 }
