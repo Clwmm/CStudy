@@ -61,9 +61,9 @@ int compareAscInt(const void* int1, const void* int2)
 void sortint(int numbers[], int count, char asscDes)
 {
     if (asscDes == '1')
-        qsort(numbers, count, sizeof(int), compareAscInt);
-    else
         qsort(numbers, count, sizeof(int), compareDesInt);
+    else
+        qsort(numbers, count, sizeof(int), compareAscInt);
 }
 
 
@@ -71,7 +71,7 @@ int main(int argc, char* argv[])
 {
     if (argc != 3)
     {
-        printf("Please enter two valid program arguments:\n[1] 0 - text, 1 - numbers\n[2] 0 - sort ascending, 1 - sort descending\n");
+        printf("Please enter two valid program arguments:\n[1] 0 - text, 1 - numbers\n[2] 0 - sort descending, 1 - sort ascending\n");
         return -1;
     }
 
