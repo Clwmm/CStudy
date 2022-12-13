@@ -127,6 +127,7 @@ int main()
 	scanf("%d", &system);
 	
 	converter(number, system);
+	printf("\n");
 	
 	return 0;
 };
