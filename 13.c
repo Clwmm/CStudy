@@ -126,7 +126,7 @@ void RzToAr(char* c, int size)
             break;
         }
     }
-    printf("%d", result);
+    printf("%d\n", result);
     return;
 }
 
@@ -134,7 +134,7 @@ int main(int argc, char *argv[])
 {
     if (argc != 2)
     {
-        printf("No number was given");
+        printf("No number was given\n");
         return 0;
     }
 

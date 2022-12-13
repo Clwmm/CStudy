@@ -11,7 +11,7 @@ int main()
 	scanf("%lf", &C);
 	printf("Specify x: ");
 	scanf("%lf", &x);
-	printf("y = %.1lf*%.1lf*%.1lf + %.1lf*%.1lf + %.1lf", A, x, x, B, x, C);
-	printf("\ny = %.1lf", A*x*x + B*x + C);
+	printf("y = %.1lf*%.1lf*%.1lf + %.1lf*%.1lf + %.1lf\n", A, x, x, B, x, C);
+	printf("y = %.1lf\n", A*x*x + B*x + C);
 	return 0;
 }

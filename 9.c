@@ -50,7 +50,7 @@ int main()
 	}
 
 	double result = 4 * (double) circle / ( (double) circle + (double) square);
-	printf("[pi] %lf", result);
+	printf("[pi] %lf\n", result);
 
 	return 0;
 }

@@ -1,11 +1,11 @@
 ﻿#include <stdio.h>
 #define tab_max_size 7500
 
-void factorial(short num);
+void factorial(int num);
 
 int main()
 {
-	short number;
+	int number;
 	printf("\nEnter a number [max 9000]: ");
 	scanf("%d", &number);
 
@@ -14,7 +14,7 @@ int main()
 	return 0;
 };
 
-void factorial(short num)
+void factorial(int num)
 {
 	if (num == 1 || num == 0)
 	{

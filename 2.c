@@ -7,6 +7,6 @@ int main()
 	scanf("%lf", &a);
 	printf("Specify b: ");
 	scanf("%lf", &b);
-	printf("A+B = %.1lf", a+b);
+	printf("A+B = %.1lf\n", a+b);
 	return 0;
 }

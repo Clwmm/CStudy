@@ -13,6 +13,6 @@ int main()
 	double a;
 	printf("Enter the number: ");
 	scanf("%lf", &a);
-	printf("Factorial from %.lf: %.lf", a, factorial(a));
+	printf("Factorial from %.lf: %.lf\n", a, factorial(a));
 	return 0;
 }

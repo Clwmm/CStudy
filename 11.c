@@ -5,7 +5,7 @@ double factorial(double number);
 int main()
 {
 	double n, k;
-	printf("\Specify n: ");
+	printf("Specify n: ");
 	scanf("%lf", &n);
 	printf("Specify k: ");
 	scanf("%lf", &k);
@@ -20,7 +20,7 @@ int main()
 	double y = factorial(k) * factorial(n - k);
 	double result = x / y;
 
-	printf("Newtwon's binomial is: %lf\n\n", result);
+	printf("Newtwon's binomial is: %lf\n", result);
 
 	return 0;
 };

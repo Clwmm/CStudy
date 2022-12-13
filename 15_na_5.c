@@ -67,7 +67,7 @@ void converter(int number, int system)
 		return;
 	}
 
-	printf("Liczba w systemie %d : ", system);
+	printf("Number in system %d : ", system);
 
 	int num = number;
 	int iterator = 0;
@@ -127,6 +127,7 @@ int main()
 	scanf("%d", &system);
 	
 	converter(number, system);
+	printf("\n");
 	
 	return 0;
 };

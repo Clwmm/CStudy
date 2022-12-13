@@ -7,7 +7,7 @@ int main()
 	int n;
 	printf("Give the number of the Fibonacci sequence: ");
 	scanf("%d", &n);
-	printf("%d The number of the Fibonacci sequence is: %d", n, fibonacci(n));
+	printf("%d The number of the Fibonacci sequence is: %d\n", n, fibonacci(n));
 	return 0;
 }
 
@@ -19,14 +19,13 @@ unsigned fibonacci(int n)
 		return 1;
 	else
 	{
-		unsigned l = 0, p = 1;
-		unsigned result;
+		unsigned temp = 1;
+		unsigned result = 1;
 
-		for (int i = 2; i <= n; i++)
+		for (int i = 2; i < n; i++)
 		{
-			result = l + p;
-			l = p;
-			p = result;
+			result += temp;
+			temp = result - temp;
 		}
 
 		return result;

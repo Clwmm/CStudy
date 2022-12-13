@@ -9,7 +9,7 @@ int main()
 	scanf("%lf", &B);
 	printf("Specify x: ");
 	scanf("%lf", &x);
-	printf("y = %.1lf*%.1lf + %.1lf", A, x, B);
-	printf("\ny = %.1lf", A * x + B);
+	printf("y = %.1lf*%.1lf + %.1lf\n", A, x, B);
+	printf("y = %.1lf\n", A * x + B);
 	return 0;
 }

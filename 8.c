@@ -17,6 +17,6 @@ int main()
 	int a, b;
 	printf("Enter two numbers [separated by a space]: ");
 	scanf("%d %d", &a, &b);
-	printf("NWD: %d", NWD(a, b));
+	printf("NWD: %d\n", NWD(a, b));
 	return 0;
 }

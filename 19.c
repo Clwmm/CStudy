@@ -91,9 +91,9 @@ int main(int argc, char* argv[])
 
         sortstring(text, counter, argv[2][0]);
 
-        printf("\nSorted:\n\n");
+        printf("\nSorted:\n");
         for (int i = 0; i < counter; i++)
-            printf("[%d] %s", i + 1, text[i]);
+            printf("%s", text[i]);
 
         for (int i = 0; i < counter; i++)
             free(text[i]);
@@ -115,10 +115,10 @@ int main(int argc, char* argv[])
         
         sortint(numbers, counter, argv[2][0]);
         
-        printf("\nSorted:\n\n");
+        printf("\nSorted:\n");
         for (int i = 0; i < counter; i++)
         {
-            printf("[x] %d\n", numbers[i]);
+            printf("%d\n", numbers[i]);
         }
     }
 
