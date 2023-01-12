@@ -120,11 +120,18 @@ void converter(int number, int system)
 int main()
 {
 	int number, system;
-
-	printf("Give the integer in decimal system: ");
-	scanf("%d", &number);
-	printf("Specify which system to convert to [from 2 to 20]: ");
-	scanf("%d", &system);
+	int done = 0;
+	do
+	{
+		printf("Give the integer in decimal system: ");
+		scanf("%d", &number);
+		printf("Specify which system to convert to [from 2 to 20]: ");
+		scanf("%d", &system);
+		if (system >= 2 && system <= 20)
+			done = 1;
+		else
+			printf("Unauthorized system specified.\n");
+	} while (!done);
 	
 	converter(number, system);
 	printf("\n");
