@@ -59,17 +59,7 @@ double calc(char* function[], int c_fun, double x)
             {
                 double x = pop();
                 double y = pop();
-                double wynik = y;
-                if (x == 0)
-                {
-                    push(1);
-                    break;
-                }
-                for (int i = 1; i < x; i++)
-                {
-                    wynik *= y;
-                }
-                push(wynik);
+                push(pow(y, x));
             }
             else if (strncmp(argv, "*", 1) == 0)
             {
