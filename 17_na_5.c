@@ -15,6 +15,8 @@ int main()
 {
     char argv[MAXSIZE];
 
+    printf("[Enter the operation in the ONP system, separate each element with an enter]\n");
+
     while (fgets(argv, MAXSIZE, stdin))
     {
         if (isdigit(*argv))
